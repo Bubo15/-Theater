@@ -1,0 +1,38 @@
+<form action="/register" method="POST">
+    <h2>Register</h2>
+
+    <div class="on-dark">
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Steven" value="{{username}}" name="username">
+    </div>
+
+    {{#if errors.username}}
+    <section>
+        <h6 class="notification-message">{{errors.username}}</h6>
+    </section>
+    {{/if}}
+
+    <div class="on-dark">
+        <label for="password">Password:</label>
+        <input type="password" placeholder="********" name="password">
+    </div>
+
+    {{#if errors.password}}
+    <section>
+        <h6 class="notification-message">{{errors.password}}</h6>
+    </section>
+    {{/if}}
+
+    <div class="on-dark">
+        <label for="repeatPassword">Repeat Password:</label>
+        <input type="password" placeholder="********" name="rePassword">
+    </div>
+
+    {{#if errors.rePassword}}
+    <section>
+        <h6 class="notification-message">{{errors.rePassword}}</h6>
+    </section>
+    {{/if}}
+
+    <button class="btn" type="submit">Register</button>
+</form>
